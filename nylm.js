@@ -133,12 +133,16 @@ function init_nylm( id ){
 				$(this).data("toggle", "1");
 				$(comment).css({visibility: "visible"});
 				save_state( index, "incr" );
+				
+				$(link).addClass( "is-pinned-down" );
+				
 				}
 			else{
 				$(this).data("toggle", "0");
 				$(comment).css({visibility: "hidden"});
 				save_state( index, "decr" );
 				$("#nylm-text-" + index ).css({display: "none"});
+				$(link).removeClass( "is-pinned-down" );
 				}
 			
 			return false;
